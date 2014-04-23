@@ -1,5 +1,16 @@
 ==CORS for angularJS and expressJS==
+to get dependencies run
+ 
+ npm install
+start server
 
+ node server
+to run tests to check if crud works w superagent
+
+ mocha
+to run angular and see if CORS is working
+
+ http://localhost:3030/animals
 ====test====
 <pre>
 $ mocha
