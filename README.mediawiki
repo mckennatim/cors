@@ -1,4 +1,6 @@
 ==CORS for angularJS and expressJS==
+A minimalist implementation of CORS enabled Angular and Node Express. Shows that an ng frontend can communicate with a restful backend. Uses ng $http.
+====setup====
 to get dependencies run
  
  npm install
