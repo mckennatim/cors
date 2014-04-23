@@ -1,0 +1,18 @@
+==CORS for angularJS and expressJS==
+
+====test====
+<pre>
+  superagent:
+  [ { dog: 'butler' }, { cat: 'mabibi' }, { bird: 'tweety' } ]
+    √ POSTs a new /animal
+    1) PUTs update /animals/:type to putby
+
+
+  1 passing (43ms)
+  1 failing
+
+  1) superagent: PUTs update /animals/:type to putby:
+     Uncaught Error: expected {} to sort of equal 1
+</pre>     
+====todo====
+put, del, 
