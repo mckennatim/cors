@@ -6,14 +6,16 @@ $ mocha
 
 
   superagent:
-there are 2 of {"type":"bird","name":"tweety"}
+there are 1 of {"type":"bird","name":"tweety"}
 the first is at index:2
     √ POSTs a new /animal
 { type: 'dog', name: 'putby' }
     √ PUTs update /animals/(of):type(dog) to name:putby
+{ name: 'daffy' }
+    √ DELs /animals/(of):type(duck) with name:daffy
 
 
-  2 passing (30ms)
+  3 passing (33ms)
 </pre>     
 ====todo====
-del 
+make the accessibility less universal

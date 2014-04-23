@@ -29,5 +29,17 @@ describe('superagent:', function(){
         expect(res.body.name).to.eql(newname.name)
         done()
       })
+  })   
+  it('DELs /animals/(of):type(duck) with name:daffy', function(done){
+    var type = 'duck';
+    var name = {name:'daffy'};
+    superagent.del(httpLoc+'animals/'+type)
+      .send(name)
+      .end(function(e, res){
+        console.log(res.body)
+        expect(e).to.eql(null)
+        expect(res.body.name).to.eql(name.name)
+        done()
+      })
   })    
 })

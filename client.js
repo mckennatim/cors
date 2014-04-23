@@ -11,6 +11,7 @@ function Ctrl1Ctrl($scope, $http){
   $scope.getout = '';
   $scope.postout = '';
   $scope.putout = '';
+  $scope.delout = '';
   $scope.dog='Butler the mutt';
   $scope.get = function(){
     var url='http://10.0.1.24:3030/';
@@ -37,6 +38,17 @@ function Ctrl1Ctrl($scope, $http){
     var promise=$http.put(url+'animals/'+type, newname).then(function(data) {
       console.log(data.data);
       $scope.putout= data.data;
+      return data;
+    });
+    return promise;    
+  }  
+  $scope.del = function(){
+    var url='http://10.0.1.24:3030/';
+    var type = 'duck';
+    var name = {name:'daffy'};
+    var promise=$http.delete(url+'animals/'+type, name).then(function(data) {
+      console.log(data.name);
+      $scope.delout= data.name;
       return data;
     });
     return promise;    

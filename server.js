@@ -31,6 +31,15 @@ app.put('/animals/:type', function(req, res){
   console.log(idx)
   res.jsonp(data[idx]);
 });
+app.del('/animals/:type', function(req, res){
+  console.log('in del');
+  console.log(req.params.type);
+  console.log(req.body);
+  var idx =data.indexOf(_.where(data, {type:req.params.type})[0]);
+  data.splice([idx],1)
+  console.log(idx)
+  res.jsonp(req.body);
+});
 app.listen(3030);
 console.log('listening on 3030')
 

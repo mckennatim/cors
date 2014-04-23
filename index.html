@@ -10,7 +10,8 @@
       <h4> CORS ng->express w/{{dog}}</h4>
       <div class="col-md-3"><button ng-click="get()" >get</button><pre>{{getout|json}}</pre></div>
       <div class="col-md-3"><button ng-click="post()" >post</button>{type:'duck',name:'daffy'}<pre>{{postout|json}}</pre></div>
-      <div class="col-md-3"><button ng-click="put()" >post</button>animals/cat',newname='snowball'}<pre>{{putout|json}}</pre></div>
+      <div class="col-md-3"><button ng-click="put()" >put</button>animals/cat',newname='snowball'}<pre>{{putout|json}}</pre></div>
+      <div class="col-md-3"><button ng-click="del()" >del</button>{type:'duck',name:'daffy'}<pre>{{delout|json}}</pre></div>
     </div>
   </body>
 </html>
