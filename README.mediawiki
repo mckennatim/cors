@@ -2,17 +2,18 @@
 
 ====test====
 <pre>
+$ mocha
+
+
   superagent:
-  [ { dog: 'butler' }, { cat: 'mabibi' }, { bird: 'tweety' } ]
+there are 2 of {"type":"bird","name":"tweety"}
+the first is at index:2
     √ POSTs a new /animal
-    1) PUTs update /animals/:type to putby
+{ type: 'dog', name: 'putby' }
+    √ PUTs update /animals/(of):type(dog) to name:putby
 
 
-  1 passing (43ms)
-  1 failing
-
-  1) superagent: PUTs update /animals/:type to putby:
-     Uncaught Error: expected {} to sort of equal 1
+  2 passing (30ms)
 </pre>     
 ====todo====
-put, del, 
+del 
