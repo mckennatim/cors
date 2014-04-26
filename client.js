@@ -1,4 +1,4 @@
-
+var url='http://10.0.1.24:3030/';
 var app = angular.module('app', ['ngRoute']);
 
 app.config(['$httpProvider', function($httpProvider) {
@@ -14,7 +14,6 @@ function Ctrl1Ctrl($scope, $http){
   $scope.delout = '';
   $scope.dog='Butler the mutt';
   $scope.get = function(){
-    var url='http://10.0.1.24:3030/';
     var promise=$http.get(url+'animals').then(function(data) {
       console.log(data.data[0])
       $scope.getout= data.data;
@@ -23,7 +22,6 @@ function Ctrl1Ctrl($scope, $http){
     return promise;    
   }
   $scope.post = function(){
-    var url='http://10.0.1.24:3030/';
     var promise=$http.post(url+'animals/', {type:'duck',name:'daffy'}).then(function(data) {
       console.log(data.data);
       $scope.postout= data.data;
@@ -32,7 +30,6 @@ function Ctrl1Ctrl($scope, $http){
     return promise;    
   }  
   $scope.put = function(){
-    var url='http://10.0.1.24:3030/';
     var type = 'cat';
     var newname = {name:'snowball'};
     var promise=$http.put(url+'animals/'+type, newname).then(function(data) {
@@ -43,7 +40,6 @@ function Ctrl1Ctrl($scope, $http){
     return promise;    
   }  
   $scope.del = function(){
-    var url='http://10.0.1.24:3030/';
     var type = 'duck';
     var name = {name:'daffy'};
     var promise=$http.delete(url+'animals/'+type, name).then(function(data) {
@@ -54,3 +50,8 @@ function Ctrl1Ctrl($scope, $http){
     return promise;    
   }
 }
+
+var appServices = angular.module('appServices', []);
+appServices.factory('ItemsData', function($http) {
+  
+});
